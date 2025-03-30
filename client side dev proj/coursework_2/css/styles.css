@@ -1,0 +1,99 @@
+/* Color Scheme */
+:root {
+    --primary-color: #1e3a8a; /* Dark Blue */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #3b82f6; /* Light Blue */
+    --text-color: #000000; /* Black */
+    --background-color: #f0f4f8; /* Light Grayish Blue */
+    --rating-color: #e74c3c; /* Red */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.4rem;
+    position: fixed;
+    line-height: 1.1;
+    width: 100%;
+    bottom : 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.movie-review {
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-review img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-review h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.movie-review p {
+    margin: 0.5rem 0;
+}
+
+.rating {
+    color: var(--rating-color);
+    font-weight: bold;
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.movie-review:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
